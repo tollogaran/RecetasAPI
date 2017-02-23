@@ -1,0 +1,17 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+<h1>{{Receta}}</h1>
+
+<p>
+  <h4> Ingredientes </h4>
+  {% for defn in ingredientes %}
+
+  <li> {{defn}} </li>
+  {% endfor %}
+  {% if not ingredientes %}
+    No se encontró
+  {% endif %}
+</p>
+{% endblock %}
